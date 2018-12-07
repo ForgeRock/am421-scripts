@@ -11,6 +11,8 @@ source $SCRIPT_DIR/common.sh
 
 STATES_JSON="$SCRIPT_DIR/states.json"
 
+"$SCRIPT_DIR/fetch-tools.sh"
+
 function echo_usage {
     log "Usage: $0 $(tput bold)stateName$(tput sgr0)"
     log "Where valid $(tput bold)stateName$(tput sgr0)s are: $(list_valid_states)"
