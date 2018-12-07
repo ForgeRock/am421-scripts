@@ -1,0 +1,296 @@
+{
+    "initial" : {
+        "am": "initial",
+        "select-role-node": "N/A",
+        "contactlist": "initial",
+        "am-extensions": "N/A",
+        "tomcats": "initial",
+        "scripted-client-auth-node": "N/A"
+    },
+
+    "Ch1L1Ex1-start" : "initial",
+    "Ch1L1Ex1-end" : "Ch1L1Ex1-start",
+
+    "Ch1L1Ex2-start" : "Ch1L1Ex1-end",
+    "Ch1L1Ex2-end" : "Ch1L1Ex2-start",
+
+
+
+    "Ch2L1Ex1-start" : "Ch1L1Ex2-end",
+    "Ch2L1Ex1-end" : {
+        "am": "Ch2L1Ex1-end",
+        "select-role-node": "N/A",
+        "contactlist": "initial",
+        "am-extensions": "N/A",
+        "tomcats": "initial",
+        "scripted-client-auth-node": "N/A"
+    },
+
+    "Ch2L1Ex2-start" : "Ch2L1Ex1-end",
+    "Ch2L1Ex2-end" : "Ch2L1Ex2-start",
+
+    "Ch2L2Ex1-start" : "Ch2L1Ex2-end",
+    "Ch2L2Ex1-end" : {
+        "am": "Ch2L1Ex1-end",
+        "select-role-node": "Ch2L2Ex1-end",
+        "contactlist": "initial",
+        "am-extensions": "N/A",
+        "tomcats": "initial",
+        "scripted-client-auth-node": "N/A"
+    },
+    
+    "Ch2L2Ex2-start" : {
+        "am": "Ch2L1Ex1-end",
+        "select-role-node": "Ch2L2Ex2-start",
+        "contactlist": "initial",
+        "am-extensions": "N/A",
+        "tomcats": "initial",
+        "scripted-client-auth-node": "N/A"
+    },
+    "Ch2L2Ex2-end-new" : {
+        "am": "Ch2L1Ex1-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "initial",
+        "am-extensions": "N/A",
+        "tomcats": "initial",
+        "scripted-client-auth-node": "N/A"
+    },
+
+    "Ch2L2Ex3-start" : "Ch2L2Ex2-end-new",
+    "Ch2L2Ex3-end" : {
+        "am": "Ch2L2Ex3-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "initial",
+        "am-extensions": "N/A",
+        "tomcats": "initial",
+        "scripted-client-auth-node": "N/A"
+    },
+
+    "Ch2L2Ex4-start" : "Ch2L2Ex3-end",
+    "Ch2L2Ex4-end" : "Ch2L2Ex4-start",
+
+    "Ch2L3Ex1-start" : "Ch2L2Ex4-end",
+    "Ch2L3Ex1-end" : {
+        "am": "Ch2L2Ex3-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "initial",
+        "am-extensions": "N/A",
+        "tomcats": "Ch2L3Ex1-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch2L3Ex2-start" : "Ch2L3Ex1-end",
+    "Ch2L3Ex2-end" : {
+        "am": "Ch2L3Ex2-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "initial",
+        "am-extensions": "N/A",
+        "tomcats": "Ch2L3Ex1-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch2L3Ex3-start" : "Ch2L3Ex2-end",
+    "Ch2L3Ex3-end" : {
+        "am": "Ch2L3Ex3-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "initial",
+        "am-extensions": "N/A",
+        "tomcats": "Ch2L3Ex1-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch2L4Ex1-start" : "Ch2L3Ex3-end",
+    "Ch2L4Ex1-end" : "Ch2L4Ex1-start",
+
+    "Ch2L4Ex2-start" : "Ch2L4Ex1-end",
+    "Ch2L4Ex2-end" : "Ch2L4Ex2-start",
+
+
+    "Ch3L1Ex1-start" : "Ch2L4Ex2-end",
+    "Ch3L1Ex1-end" : {
+        "am": "Ch3L1Ex1-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "initial",
+        "am-extensions": "N/A",
+        "tomcats": "Ch2L3Ex1-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch3L1Ex2-start" : "Ch3L1Ex1-end",
+    "Ch3L1Ex2-end" : {
+        "am": "Ch3L1Ex2-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "initial",
+        "am-extensions": "N/A",
+        "tomcats": "Ch2L3Ex1-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch3L1Ex3-start" : "Ch3L1Ex2-end",
+    "Ch3L1Ex3-end" : {
+        "am": "Ch3L1Ex3-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "initial",
+        "am-extensions": "N/A",
+        "tomcats": "Ch2L3Ex1-end",
+        "scripted-client-auth-node": "master"
+    },
+
+
+    "Ch4L1Ex1-start" : "Ch3L1Ex3-end",
+    "Ch4L1Ex1-end" : "Ch4L1Ex1-start",
+
+    "Ch4L1Ex2-start" : "Ch4L1Ex1-end",
+    "Ch4L1Ex2-end" : {
+        "am": "Ch3L1Ex3-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "initial",
+        "am-extensions": "N/A",
+        "tomcats": "Ch4L1Ex2-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch4L1Ex3-start" : "Ch4L1Ex2-end",
+    "Ch4L1Ex3-end" : {
+        "am": "Ch3L1Ex3-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "Ch4L1Ex3-end",
+        "am-extensions": "N/A",
+        "tomcats": "Ch4L1Ex2-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch4L2Ex1-start" : "Ch4L1Ex3-end",
+    "Ch4L2Ex1-end" : {
+        "am": "Ch3L1Ex3-end",
+        "select-role-node":"Ch2L2Ex2-end-new",
+        "contactlist": "Ch4L2Ex1-end",
+        "am-extensions": "N/A",
+        "tomcats": "Ch4L1Ex2-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch4L2Ex2-start" : "Ch4L2Ex1-end",
+    "Ch4L2Ex2-end" : {
+        "am": "Ch3L1Ex3-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "Ch4L2Ex2-end",
+        "am-extensions": "N/A",
+        "tomcats": "Ch4L1Ex2-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch4L3Ex1-start" : "Ch4L2Ex2-end",
+    "Ch4L3Ex1-end" : {
+        "am": "Ch4L3Ex1-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "Ch4L2Ex2-end",
+        "am-extensions": "N/A",
+        "tomcats": "Ch4L1Ex2-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch4L3Ex2-start" : "Ch4L3Ex1-end",
+    "Ch4L3Ex2-end" : "Ch4L3Ex2-start",
+
+    "Ch4L3Ex3-start" : "Ch4L3Ex2-end",
+    "Ch4L3Ex3-end" : {
+        "am": "Ch4L3Ex1-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "Ch4L3Ex3-end",
+        "am-extensions": "N/A",
+        "tomcats": "Ch4L1Ex2-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch4L4Ex1-start" : "Ch4L3Ex3-end",
+    "Ch4L4Ex1-end" : {
+        "am": "Ch4L4Ex1-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "Ch4L3Ex3-end",
+        "am-extensions": "N/A",
+        "tomcats": "Ch4L1Ex2-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch4L4Ex2-start" : "Ch4L4Ex1-end",
+    "Ch4L4Ex2-end" : {
+        "am": "Ch4L4Ex1-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "Ch4L4Ex2-end",
+        "am-extensions": "N/A",
+        "tomcats": "Ch4L1Ex2-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch4L4Ex3-start" : "Ch4L4Ex2-end",
+    "Ch4L4Ex3-end" : {
+        "am": "Ch4L4Ex1-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "Ch4L4Ex3-end",
+        "am-extensions": "N/A",
+        "tomcats": "Ch4L1Ex2-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch5L1Ex1-start" : "Ch4L4Ex3-end",
+    "Ch5L1Ex1-end" : {
+        "am": "Ch5L1Ex1-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "Ch4L4Ex3-end",
+        "am-extensions": "N/A",
+        "tomcats": "Ch4L1Ex2-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch5L1Ex2-start" : "Ch5L1Ex1-end",
+    "Ch5L1Ex2-end" : {
+        "am": "Ch5L1Ex2-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "Ch4L4Ex3-end",
+        "am-extensions": "Ch5L1Ex2-end",
+        "tomcats": "Ch4L1Ex2-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch5L1Ex3-start" : "Ch5L1Ex2-end",
+    "Ch5L1Ex3-end" : {
+        "am": "Ch5L1Ex1-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "Ch5L1Ex3-end",
+        "am-extensions": "Ch5L1Ex2-end",
+        "tomcats": "Ch4L1Ex2-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch5L1Ex4-start" : "Ch5L1Ex3-end",
+    "Ch5L1Ex4-end" : {
+        "am": "Ch5L1Ex1-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "Ch5L1Ex4-end",
+        "am-extensions": "Ch5L1Ex2-end",
+        "tomcats": "Ch4L1Ex2-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch6L1Ex1-start" : {
+        "am": "Ch5L1Ex1-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "Ch6L1Ex1-start",
+        "am-extensions": "Ch5L1Ex2-end",
+        "tomcats": "Ch4L1Ex2-end",
+        "scripted-client-auth-node": "master"
+    },
+    "Ch6L1Ex1-end" : {
+        "am": "Ch6L1Ex1-end",
+        "select-role-node": "Ch2L2Ex2-end-new",
+        "contactlist": "Ch6L1Ex1-start",
+        "am-extensions": "Ch5L1Ex2-end",
+        "tomcats": "Ch4L1Ex2-end",
+        "scripted-client-auth-node": "master"
+    },
+
+    "Ch6L1Ex2-start" : "Ch6L1Ex1-end",
+    "Ch6L1Ex2-end" : "Ch6L1Ex2-start"
+
+}
