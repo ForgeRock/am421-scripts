@@ -15,5 +15,5 @@ logf "  Fetching latest version of tools..."
 git fetch --all > /dev/null
 logstatus
 logf "  Replacing modified files with fresh ones..."
-git checkout -f master > /dev/null
+git checkout -q -f master > /dev/null
 logstatus
