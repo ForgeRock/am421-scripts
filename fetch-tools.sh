@@ -14,5 +14,5 @@ cd "$SCRIPT_DIR"
 logf "  Fetching latest version of scripts..."
 git clean -f -q
 git reset --hard --quiet master
-git pull -f -q
+git pull -f -q 2>&1 | awk '{printf $0".."}'
 logstatus
