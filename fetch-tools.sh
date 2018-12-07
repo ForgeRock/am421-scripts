@@ -11,9 +11,8 @@ source $SCRIPT_DIR/common.sh
 
 cd "$SCRIPT_DIR"
 
-logf "  Fetching latest version of tools..."
-git fetch --all > /dev/null
-logstatus
-logf "  Replacing modified files with fresh ones..."
-git checkout -q -f master > /dev/null
+logf "  Fetching latest version of scripts..."
+git clean -f -q
+git reset --hard --quiet master
+git pull -f -q
 logstatus
