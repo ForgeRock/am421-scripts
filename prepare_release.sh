@@ -4,12 +4,12 @@
 SCRIPT_DIR="$( dirname "$( which "$0" )" )"
 source $SCRIPT_DIR/common.sh
 
-$COURSE_VERSION=$(cat "${COURSE_DIR}/VERSION")
-$TIMESTAMP = $(date --rfc-3339=seconds)
+COURSE_VERSION=$(cat "${COURSE_DIR}/VERSION")
+TIMESTAMP=$(date --rfc-3339=seconds)
 
 log "Releasing VM version ${COURSE_VERSION}..."
 
-logf "Are you sure you want to do the cleanup and release the VM? (type $(tput setaf 2)yes$(tput sgr0)). "
+logf "Are you sure you want to do the cleanup and release the VM? (type $(tput setaf 2)yes$(tput sgr0)) "
 read "RESPONSE"
 
 if [ $RESPONSE != 'yes' ]
