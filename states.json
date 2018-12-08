@@ -3,7 +3,7 @@
         "am": "initial",
         "select-role-node": "N/A",
         "contactlist": "initial",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "initial",
         "scripted-client-auth-node": "N/A"
     },
