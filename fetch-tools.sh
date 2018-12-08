@@ -1,5 +1,5 @@
 #!/bin/bash
-# Pulls the latest version of the scripts
+# Fetches the latest version of the scripts
 
 SCRIPT_DIR="$( dirname "$( which "$0" )" )"
 source $SCRIPT_DIR/common.sh

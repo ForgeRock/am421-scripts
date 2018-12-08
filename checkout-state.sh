@@ -43,7 +43,7 @@ function read_config_property {
 function list_valid_states {
     local CURRENT_STATE=$(cat ${COURSE_DIR}/STATE)
     printf "\n    "
-    cat "${STATES_JSON}" | jq --raw-output 'keys | join("\n")' | awk '{printf $1; if ($1 == "'${CURRENT_STATE}'") {printf " (current)"}; print ""}'
+    cat "${STATES_JSON}" | jq --raw-output 'keys | join("\n")' | awk '{printf $1; if ($1 == "'${CURRENT_STATE}'") {system "tput bold"; printf " (current)"; system "tput sgr0"}; print ""}'
 }
 
 function resolve_state_config {
@@ -62,7 +62,7 @@ function resolve_state_config {
       exit 1
     else
       echo "$CONFIG"
-      RESOLVED_CONFIG_NAME=CONFIG_NAME
+      TARGET_CONFIG_NAME=CONFIG_NAME
     fi
 }
 
@@ -181,4 +181,4 @@ checkout_repository_state "scripted-client-auth-node" "${SCRIPTED_CLIENT_AUTH_NO
 checkout_repository_state "contactlist" "${CONTACTLIST_BRANCH}"
 "$SCRIPT_DIR/deploy_contactlist.sh"
 
-echo ${RESOLVED_CONFIG_NAME} > ${COURSE_DIR}/STATE
+echo ${TARGET_CONFIG_NAME} > ${COURSE_DIR}/STATE
