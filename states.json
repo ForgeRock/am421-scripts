@@ -21,7 +21,7 @@
         "am": "Ch2L1Ex1-end",
         "select-role-node": "N/A",
         "contactlist": "initial",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "initial",
         "scripted-client-auth-node": "N/A"
     },
@@ -34,7 +34,7 @@
         "am": "Ch2L1Ex1-end",
         "select-role-node": "Ch2L2Ex1-end",
         "contactlist": "initial",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "initial",
         "scripted-client-auth-node": "N/A"
     },
@@ -43,7 +43,7 @@
         "am": "Ch2L1Ex1-end",
         "select-role-node": "Ch2L2Ex2-start",
         "contactlist": "initial",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "initial",
         "scripted-client-auth-node": "N/A"
     },
@@ -51,7 +51,7 @@
         "am": "Ch2L1Ex1-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "initial",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "initial",
         "scripted-client-auth-node": "N/A"
     },
@@ -61,7 +61,7 @@
         "am": "Ch2L2Ex3-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "initial",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "initial",
         "scripted-client-auth-node": "N/A"
     },
@@ -74,7 +74,7 @@
         "am": "Ch2L2Ex3-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "initial",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "Ch2L3Ex1-end",
         "scripted-client-auth-node": "master"
     },
@@ -84,7 +84,7 @@
         "am": "Ch2L3Ex2-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "initial",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "Ch2L3Ex1-end",
         "scripted-client-auth-node": "master"
     },
@@ -94,7 +94,7 @@
         "am": "Ch2L3Ex3-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "initial",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "Ch2L3Ex1-end",
         "scripted-client-auth-node": "master"
     },
@@ -111,7 +111,7 @@
         "am": "Ch3L1Ex1-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "initial",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "Ch2L3Ex1-end",
         "scripted-client-auth-node": "master"
     },
@@ -121,7 +121,7 @@
         "am": "Ch3L1Ex2-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "initial",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "Ch2L3Ex1-end",
         "scripted-client-auth-node": "master"
     },
@@ -131,7 +131,7 @@
         "am": "Ch3L1Ex3-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "initial",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "Ch2L3Ex1-end",
         "scripted-client-auth-node": "master"
     },
@@ -145,7 +145,7 @@
         "am": "Ch3L1Ex3-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "initial",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
         "scripted-client-auth-node": "master"
     },
@@ -155,7 +155,7 @@
         "am": "Ch3L1Ex3-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "Ch4L1Ex3-end",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
         "scripted-client-auth-node": "master"
     },
@@ -165,7 +165,7 @@
         "am": "Ch3L1Ex3-end",
         "select-role-node":"Ch2L2Ex2-end-new",
         "contactlist": "Ch4L2Ex1-end",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
         "scripted-client-auth-node": "master"
     },
@@ -175,7 +175,7 @@
         "am": "Ch3L1Ex3-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "Ch4L2Ex2-end",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
         "scripted-client-auth-node": "master"
     },
@@ -185,7 +185,7 @@
         "am": "Ch4L3Ex1-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "Ch4L2Ex2-end",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
         "scripted-client-auth-node": "master"
     },
@@ -198,7 +198,7 @@
         "am": "Ch4L3Ex1-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "Ch4L3Ex3-end",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
         "scripted-client-auth-node": "master"
     },
@@ -208,7 +208,7 @@
         "am": "Ch4L4Ex1-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "Ch4L3Ex3-end",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
         "scripted-client-auth-node": "master"
     },
@@ -218,7 +218,7 @@
         "am": "Ch4L4Ex1-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "Ch4L4Ex2-end",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
         "scripted-client-auth-node": "master"
     },
@@ -228,7 +228,7 @@
         "am": "Ch4L4Ex1-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "Ch4L4Ex3-end",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
         "scripted-client-auth-node": "master"
     },
@@ -238,7 +238,7 @@
         "am": "Ch5L1Ex1-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "Ch4L4Ex3-end",
-        "am-extensions": "N/A",
+        "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
         "scripted-client-auth-node": "master"
     },
