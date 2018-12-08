@@ -9,7 +9,7 @@
 #$LOGGER_DIR/LabScriptLogger.sh "-- $0 started ($NOW )"
 
 SCRIPT_DIR="$( dirname "$( which "$0" )" )"
-
+COURSE_DIR=/opt/forgerock/course
 TOMCATS_HOME=/opt/tomcats
 AM_TOMCAT_NAME=login
 APP_TOMCAT_NAME=app
