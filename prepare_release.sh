@@ -5,7 +5,6 @@ SCRIPT_DIR="$( dirname "$( which "$0" )" )"
 source $SCRIPT_DIR/common.sh
 
 COURSE_VERSION=$(cat "${COURSE_DIR}/VERSION")
-TIMESTAMP=$(date --rfc-3339=seconds)
 
 log "Releasing VM version ${COURSE_VERSION}..."
 
@@ -20,8 +19,9 @@ fi
 
 $SCRIPT_DIR/checkout-state.sh initial
 
+TIMESTAMP=$(date --rfc-3339=seconds)
 logf "  Setting release timestamp to ${TIMESTAMP}..."
-echo $TIMESTAMP > "${COURSE_DIR}/RELEASE_TIMESTAMP"
+echo "{$TIMESTAMP}" > "${COURSE_DIR}/RELEASE_TIMESTAMP"
 logsuccess
 
 "$SCRIPT_DIR/reset_browsers.sh"
