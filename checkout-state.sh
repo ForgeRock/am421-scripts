@@ -42,8 +42,8 @@ function read_config_property {
 
 function list_valid_states {
     local CURRENT_STATE=$(cat ${COURSE_DIR}/STATE)
-    printf "\n    "
-    cat "${STATES_JSON}" | jq --raw-output 'keys | join("\n")' | awk -v bold="$(tput bold)" -v norm="$(tput sgr0)" '{printf $1; if ($1 == "'${CURRENT_STATE}'") { printf " %s(current)%s", bold, norm}; print ""}'
+    echo
+    cat "${STATES_JSON}" | jq --raw-output 'keys | join("\n")' | awk -v bold="$(tput bold)" -v norm="$(tput sgr0)" '{printf "    %s", $1; if ($1 == "'${CURRENT_STATE}'") { printf " %s(current)%s", bold, norm}; print ""}'
 }
 
 function resolve_state_config {
