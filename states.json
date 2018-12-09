@@ -47,7 +47,7 @@
         "tomcats": "initial",
         "scripted-client-auth-node": "N/A"
     },
-    "Ch2L2Ex2-end-new" : {
+    "Ch2L2Ex2-end" : {
         "am": "Ch2L1Ex1-end",
         "select-role-node": "Ch2L2Ex2-end-new",
         "contactlist": "initial",
@@ -56,7 +56,7 @@
         "scripted-client-auth-node": "N/A"
     },
 
-    "Ch2L2Ex3-start" : "Ch2L2Ex2-end-new",
+    "Ch2L2Ex3-start" : "Ch2L2Ex2-end",
     "Ch2L2Ex3-end" : {
         "am": "Ch2L2Ex3-end",
         "select-role-node": "Ch2L2Ex2-end-new",
