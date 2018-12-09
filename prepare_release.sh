@@ -21,7 +21,7 @@ $SCRIPT_DIR/checkout-state.sh initial
 
 TIMESTAMP=$(date --rfc-3339=seconds)
 logf "  Setting release timestamp to ${TIMESTAMP}..."
-echo "{$TIMESTAMP}" > "${COURSE_DIR}/RELEASE_TIMESTAMP"
+echo "${TIMESTAMP}" > "${COURSE_DIR}/RELEASE_TIMESTAMP"
 logsuccess
 
 "$SCRIPT_DIR/reset_browsers.sh"
@@ -34,5 +34,5 @@ logf "  Turning off history for this session..."
 history -c
 logsuccess
 
-logf "Setting release timestamp to ${TIMESTAMP}..."
+log "Now type $(tput bold)history -c && exit $(tput sgr0) and create the snapshot named $(tput bold)\"${COURSE_VERSION} ${TIMESTAMP}\"$(tput sgr0)"
 
