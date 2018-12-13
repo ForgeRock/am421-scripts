@@ -1,4 +1,9 @@
 #!/bin/bash
+TMP_DIR=$HOME/temp
+if [ ! -d ${TMP_DIR} ]; then
+  mkdir -p ${TMP_DIR}
+fi
+
 CODE_VAL=${1:-${code_value}}
 if [ -z ${CODE_VAL} ];  then
   echo "Usage: $0 \"code-value-string\""
@@ -7,7 +12,7 @@ if [ -z ${CODE_VAL} ];  then
   echo "   $0"
   exit 1
 fi
-cat <<-END > ${PWD}/icode.json
+cat <<-END > ${TMP_DIR}/icode.json
 {
   "input": {
     "code": "code-value"
@@ -17,13 +22,12 @@ cat <<-END > ${PWD}/icode.json
 END
 TOKEN_DATA=${token_data}
 if [ -z ${token_data} ]; then
-  TOKEN_DATA=$(cat ${PWD}/resp1.json | jq .token)
+  TOKEN_DATA=$(cat ${TMP_DIR}/resp1.json | jq .token)
 fi
-set -x
-cat ${PWD}/icode.json | jq ".input.code = \"${CODE_VAL}\" | .token=${TOKEN_DATA}" > ${PWD}/code.json
-curl -X POST \
+cat ${TMP_DIR}/icode.json | jq ".input.code = \"${CODE_VAL}\" | .token=${TOKEN_DATA}" > ${TMP_DIR}/code.json
+
+curl -s -X POST \
   -H 'Content-Type: application/json' \
   -H 'Accept-API-Version: resource=1.0' \
-  --data @${PWD}/code.json \
-http://login.example.com:18080/am/json/selfservice/forgottenPassword?_action=submitRequirements | tee ${PWD}/resp2.json | jq
-set +x
+  --data @${TMP_DIR}/code.json \
+'http://login.example.com:18080/am/json/selfservice/forgottenPassword?_action=submitRequirements' | tee ${TMP_DIR}/resp2.json | jq

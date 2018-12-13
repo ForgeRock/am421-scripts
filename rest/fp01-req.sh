@@ -1,7 +1,10 @@
 #!/bin/bash
+TMP_DIR=$HOME/temp
+if [ -d ${TMP_DIR} ]; then
+  rm  ${TMP_DIR}/*.json
+else
+  mkdir -p ${TMP_DIR}
+fi
 
-rm -rf ${PWD}/*.json
-set -x
-curl -H "Accept-API-Version: resource=1.0" \
- http://login.example.com:18080/am/json/selfservice/forgottenPassword | jq
-set +x
+curl -s -H "Accept-API-Version: resource=1.0" \
+ 'http://login.example.com:18080/am/json/selfservice/forgottenPassword' | jq
