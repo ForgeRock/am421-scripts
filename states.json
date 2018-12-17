@@ -49,7 +49,7 @@
     },
     "Ch2L2Ex2-end" : {
         "am": "Ch2L1Ex1-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "initial",
         "am-extensions": "initial",
         "tomcats": "initial",
@@ -59,7 +59,7 @@
     "Ch2L2Ex3-start" : "Ch2L2Ex2-end",
     "Ch2L2Ex3-end" : {
         "am": "Ch2L2Ex3-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "initial",
         "am-extensions": "initial",
         "tomcats": "initial",
@@ -72,7 +72,7 @@
     "Ch2L3Ex1-start" : "Ch2L2Ex4-end",
     "Ch2L3Ex1-end" : {
         "am": "Ch2L2Ex3-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "initial",
         "am-extensions": "initial",
         "tomcats": "Ch2L3Ex1-end",
@@ -82,7 +82,7 @@
     "Ch2L3Ex2-start" : "Ch2L3Ex1-end",
     "Ch2L3Ex2-end" : {
         "am": "Ch2L3Ex2-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "initial",
         "am-extensions": "initial",
         "tomcats": "Ch2L3Ex1-end",
@@ -92,7 +92,7 @@
     "Ch2L3Ex3-start" : "Ch2L3Ex2-end",
     "Ch2L3Ex3-end" : {
         "am": "Ch2L3Ex3-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "initial",
         "am-extensions": "initial",
         "tomcats": "Ch2L3Ex1-end",
@@ -109,7 +109,7 @@
     "Ch3L1Ex1-start" : "Ch2L4Ex2-end",
     "Ch3L1Ex1-end" : {
         "am": "Ch3L1Ex1-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "initial",
         "am-extensions": "initial",
         "tomcats": "Ch2L3Ex1-end",
@@ -119,7 +119,7 @@
     "Ch3L1Ex2-start" : "Ch3L1Ex1-end",
     "Ch3L1Ex2-end" : {
         "am": "Ch3L1Ex2-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "initial",
         "am-extensions": "initial",
         "tomcats": "Ch2L3Ex1-end",
@@ -129,7 +129,7 @@
     "Ch3L1Ex3-start" : "Ch3L1Ex2-end",
     "Ch3L1Ex3-end" : {
         "am": "Ch3L1Ex3-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "initial",
         "am-extensions": "initial",
         "tomcats": "Ch2L3Ex1-end",
@@ -143,7 +143,7 @@
     "Ch4L1Ex2-start" : "Ch4L1Ex1-end",
     "Ch4L1Ex2-end" : {
         "am": "Ch3L1Ex3-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "initial",
         "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
@@ -153,7 +153,7 @@
     "Ch4L1Ex3-start" : "Ch4L1Ex2-end",
     "Ch4L1Ex3-end" : {
         "am": "Ch3L1Ex3-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch4L1Ex3-end",
         "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
@@ -163,7 +163,7 @@
     "Ch4L2Ex1-start" : "Ch4L1Ex3-end",
     "Ch4L2Ex1-end" : {
         "am": "Ch3L1Ex3-end",
-        "select-role-node":"Ch2L2Ex2-end-new",
+        "select-role-node":"Ch2L2Ex2-end",
         "contactlist": "Ch4L2Ex1-end",
         "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
@@ -173,7 +173,7 @@
     "Ch4L2Ex2-start" : "Ch4L2Ex1-end",
     "Ch4L2Ex2-end" : {
         "am": "Ch3L1Ex3-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch4L2Ex2-end",
         "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
@@ -183,7 +183,7 @@
     "Ch4L3Ex1-start" : "Ch4L2Ex2-end",
     "Ch4L3Ex1-end" : {
         "am": "Ch4L3Ex1-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch4L2Ex2-end",
         "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
@@ -196,7 +196,7 @@
     "Ch4L3Ex3-start" : "Ch4L3Ex2-end",
     "Ch4L3Ex3-end" : {
         "am": "Ch4L3Ex1-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch4L3Ex3-end",
         "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
@@ -206,7 +206,7 @@
     "Ch4L4Ex1-start" : "Ch4L3Ex3-end",
     "Ch4L4Ex1-end" : {
         "am": "Ch4L4Ex1-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch4L3Ex3-end",
         "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
@@ -216,7 +216,7 @@
     "Ch4L4Ex2-start" : "Ch4L4Ex1-end",
     "Ch4L4Ex2-end" : {
         "am": "Ch4L4Ex1-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch4L4Ex2-end",
         "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
@@ -226,7 +226,7 @@
     "Ch4L4Ex3-start" : "Ch4L4Ex2-end",
     "Ch4L4Ex3-end" : {
         "am": "Ch4L4Ex1-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch4L4Ex3-end",
         "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
@@ -236,7 +236,7 @@
     "Ch5L1Ex1-start" : "Ch4L4Ex3-end",
     "Ch5L1Ex1-end" : {
         "am": "Ch5L1Ex1-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch4L4Ex3-end",
         "am-extensions": "initial",
         "tomcats": "Ch4L1Ex2-end",
@@ -246,7 +246,7 @@
     "Ch5L1Ex2-start" : "Ch5L1Ex1-end",
     "Ch5L1Ex2-end" : {
         "am": "Ch5L1Ex2-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch4L4Ex3-end",
         "am-extensions": "Ch5L1Ex2-end",
         "tomcats": "Ch4L1Ex2-end",
@@ -256,7 +256,7 @@
     "Ch5L1Ex3-start" : "Ch5L1Ex2-end",
     "Ch5L1Ex3-end" : {
         "am": "Ch5L1Ex1-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch5L1Ex3-end",
         "am-extensions": "Ch5L1Ex2-end",
         "tomcats": "Ch4L1Ex2-end",
@@ -266,7 +266,7 @@
     "Ch5L1Ex4-start" : "Ch5L1Ex3-end",
     "Ch5L1Ex4-end" : {
         "am": "Ch5L1Ex1-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch5L1Ex4-end",
         "am-extensions": "Ch5L1Ex2-end",
         "tomcats": "Ch4L1Ex2-end",
@@ -275,7 +275,7 @@
 
     "Ch6L1Ex1-start" : {
         "am": "Ch5L1Ex1-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch6L1Ex1-start",
         "am-extensions": "Ch5L1Ex2-end",
         "tomcats": "Ch4L1Ex2-end",
@@ -283,7 +283,7 @@
     },
     "Ch6L1Ex1-end" : {
         "am": "Ch6L1Ex1-end",
-        "select-role-node": "Ch2L2Ex2-end-new",
+        "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch6L1Ex1-start",
         "am-extensions": "Ch5L1Ex2-end",
         "tomcats": "Ch4L1Ex2-end",
