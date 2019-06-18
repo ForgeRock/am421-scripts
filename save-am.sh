@@ -99,7 +99,7 @@ fi
 
 AM_BACKUP_NAME=$(read_config_property "am")
 
-if ! [ $AM_BACKUP_NAME eq $CONFIG_NAME]
+if ! [ $AM_BACKUP_NAME eq $CONFIG_NAME ]
 then
     logf "CONFIG refers to a different AM backup. Config: $CONFIG_NAME  AM Backup: $AM_BACKUP_NAME"
 fi
