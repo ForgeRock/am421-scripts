@@ -101,10 +101,9 @@ AM_BACKUP_NAME=$(read_config_property "am")
 
 if [ "$AM_BACKUP_NAME" != "$CONFIG_NAME" ]
 then
-    logf "CONFIG refers to a different AM backup. Config: $CONFIG_NAME  AM Backup: $AM_BACKUP_NAME\n"
+    logf "CONFIG refers to a different AM backup. Config: $CONFIG_NAME  AM Backup: $AM_BACKUP_NAME. Select a state which matches the am state name or fix states.json before performing an AM backup into this state.\n"
+    exit 1
 fi
-logf "OK\n"
-exit
 
 "$SCRIPT_DIR/manage_tomcats.sh" login stop
 
