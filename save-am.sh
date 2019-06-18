@@ -71,13 +71,13 @@ function save_am_state {
 
     if [ -d $AM_BACKUP ]
     then
-        log "  Deleting existing backup for state ${STATE}..."
+        logf "  Deleting existing backup for state ${STATE}..."
         rm -rf "$AM_BACKUP"
         logstatus
     fi
 
     logf "  Cleaning up AM config dir..."
-    rm -rf "$AM_CONFIG_DIR/am/backup/*" "$AM_CONFIG_DIR/am/debug/*" "$AM_CONFIG_DIR/am/logs/*" "$AM_CONFIG_DIR/opends/logs/*"
+    rm -rf "$AM_CONFIG_DIR/backups/*" "$AM_CONFIG_DIR/am/debug/*" "$AM_CONFIG_DIR/am/log/*" "$AM_CONFIG_DIR/opends/logs/*"
     logstatus
 
     logf "  Saving AM's config directory into ${AM_BACKUP} ..."
@@ -101,7 +101,7 @@ AM_BACKUP_NAME=$(read_config_property "am")
 
 if [ "$AM_BACKUP_NAME" != "$CONFIG_NAME" ]
 then
-    logf "CONFIG refers to a different AM backup. Config: $CONFIG_NAME  AM Backup: $AM_BACKUP_NAME. Select a state which matches the am state name or fix states.json before performing an AM backup into this state.\n"
+    log "CONFIG refers to a different AM backup. Config: $CONFIG_NAME  AM Backup: $AM_BACKUP_NAME. Select a state which matches the am state name or fix states.json before performing an AM backup into this state."
     exit 1
 fi
 
