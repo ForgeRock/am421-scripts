@@ -67,7 +67,14 @@
     },
 
     "Ch2L2Ex4-start" : "Ch2L2Ex3-end",
-    "Ch2L2Ex4-end" : "Ch2L2Ex4-start",
+    "Ch2L2Ex4-end" : {
+        "am": "Ch2L2Ex4-end",
+        "select-role-node": "Ch2L2Ex2-end",
+        "contactlist": "initial",
+        "am-extensions": "initial",
+        "tomcats": "initial",
+        "scripted-client-auth-node": "N/A"
+    },
 
     "Ch2L3Ex1-start" : "Ch2L2Ex4-end",
     "Ch2L3Ex1-end" : {
