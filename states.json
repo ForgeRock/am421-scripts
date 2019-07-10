@@ -281,7 +281,7 @@
     },
 
     "Ch6L1Ex1-start" : {
-        "am": "Ch5L1Ex1-end",
+        "am": "Ch5L1Ex2-end",
         "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch6L1Ex1-start",
         "am-extensions": "Ch5L1Ex2-end",
