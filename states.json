@@ -262,7 +262,7 @@
 
     "Ch5L1Ex3-start" : "Ch5L1Ex2-end",
     "Ch5L1Ex3-end" : {
-        "am": "Ch5L1Ex1-end",
+        "am": "Ch5L1Ex2-end",
         "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch5L1Ex3-end",
         "am-extensions": "Ch5L1Ex2-end",
@@ -272,7 +272,7 @@
 
     "Ch5L1Ex4-start" : "Ch5L1Ex3-end",
     "Ch5L1Ex4-end" : {
-        "am": "Ch5L1Ex1-end",
+        "am": "Ch5L1Ex2-end",
         "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch5L1Ex4-end",
         "am-extensions": "Ch5L1Ex2-end",
