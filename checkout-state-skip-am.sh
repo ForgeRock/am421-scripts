@@ -22,7 +22,7 @@ function echo_usage {
 COURSE="AM421"
 BACKUPS_DIR="/opt/forgerock/course/backups"
 AM_BACKUPS_DIR="$BACKUPS_DIR/am"
-GIT_SOURCES_DIR="$BACKUPS_DIR/NetBeansProjects"
+GIT_SOURCES_DIR="$BACKUPS_DIR/AMProjects"
 
 LOG_DATETIME=$(date +"%Y%m%d_%H%M%S")
 
