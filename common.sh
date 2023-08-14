@@ -82,7 +82,7 @@ function setCatalinaHomeOrFail {
 
   if [ ! -d "$CATALINA_HOME" ]; then
       log "Tomcat home does not exist: $CATALINA_HOME"
-      return -1
+      return 1
   fi
 }
 
