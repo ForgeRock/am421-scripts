@@ -1,8 +1,8 @@
 #!/bin/bash
 
-BCKCMD="/opt/opendj/bin/backup"
+BCKCMD="/opt/opendj/bin/dsbackup"
 BASE_DIR="${1:-/opt/forgerock/course/backups/ldap-backend}"
-DSPWD="${2:-cangetindj}"
+DSPWD="${2:-cangetinds}"
 
 SCRIPT_DIR="$( dirname "$( which "$0" )" )"
 source $SCRIPT_DIR/common.sh
@@ -34,7 +34,7 @@ function backupDS() {
      exit 1
   fi
   logf "Backup DS backendId=${backendId}..."
-  ${BCKCMD} --hostname forgerock.example.com  --port 5444  --bindDN cn="Directory Manager"  --bindPassword ${DSPWD} --backendId ${backendId}  --backupDirectory ${BASE_DIR}/${backendId} --start 0 --trustAll
+  ${BCKCMD} create --hostname forgerock.example.com  --port 5444  --bindDN uid=admin  --bindPassword ${DSPWD} --backendName ${backendId}  --backupLocation ${BASE_DIR}/${backendId} --start 0 --trustAll
   logstatus
 }
 
@@ -42,7 +42,7 @@ function backupDS() {
 cleanDSBackup
 
 logf "Backing up ForgeRock Directory Server"
-ID_LIST="schema tasks userRoot"
+ID_LIST="schema tasks amIdentityStore"
 for id in ${ID_LIST}; do
   backupDS ${id}
 done

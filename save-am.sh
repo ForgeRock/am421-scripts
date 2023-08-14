@@ -9,7 +9,7 @@ source $SCRIPT_DIR/common.sh
 
 STATES_JSON="$SCRIPT_DIR/states.json"
 
-"$SCRIPT_DIR/fetch-tools.sh"
+#"$SCRIPT_DIR/fetch-tools.sh"
 
 function echo_usage {
     log "Usage: $0 $(tput bold)stateName$(tput sgr0)"
@@ -77,7 +77,8 @@ function save_am_state {
     fi
 
     logf "  Cleaning up AM config dir..."
-    rm -rf "$AM_CONFIG_DIR/backups/*" "$AM_CONFIG_DIR/am/debug/*" "$AM_CONFIG_DIR/am/log/*" "$AM_CONFIG_DIR/opends/logs/*"
+    rm -rf $AM_CONFIG_DIR/backups/* $AM_CONFIG_DIR/var/debug/* $AM_CONFIG_DIR/var/stats/* $AM_CONFIG_DIR/var/audit/* \
+      $AM_CONFIG_DIR/opends/logs/* $AM_CONFIG_DIR/opends/var/archived-configs/*
     logstatus
 
     logf "  Saving AM's config directory into ${AM_BACKUP} ..."

@@ -71,9 +71,10 @@ function checkout_repository_state {
     local BRANCH="$2"
     local DEPLOY_AS_AM_EXTENSION=$3
     local REPO_SOURCE_GIT="${GIT_SOURCES_DIR}/${REPO_NAME}.git"
+    REPO_NAME=${REPO_NAME/am421-/}  # strip leading am421- text from repo name from here on
     local REPO_TARGET_DIR="${PROJECTS_DIR}/${REPO_NAME}"
 
-    if ! [[ "$REPO_NAME" =~ ^[a-z-]{1,}$ ]]
+    if ! [[ "$REPO_NAME" =~ ^[a-z0-9-]{1,}$ ]]
     then
         log "Unsafe git repo name: {$REPO_NAME}"
         exit 1
@@ -85,9 +86,9 @@ function checkout_repository_state {
         logf "  Deleting project dir..."
         rm -rf "$REPO_TARGET_DIR"
         logstatus
-        logf "  Fetching latest version of git repository..."
-        git --git-dir "${REPO_SOURCE_GIT}" fetch --all > /dev/null
-        logstatus
+        #logf "  Fetching latest version of git repository..."
+        #git --git-dir "${REPO_SOURCE_GIT}" fetch --all > /dev/null
+        #logstatus
         logf "  Cloning ${REPO_NAME} repo's branch ${BRANCH}..."
         git clone -q -b "${BRANCH}" "${REPO_SOURCE_GIT}" "${REPO_TARGET_DIR}" > /dev/null
         logstatus
@@ -171,14 +172,14 @@ SCRIPTED_CLIENT_AUTH_NODE_BRANCH=$(read_config_property "scripted-client-auth-no
 "$SCRIPT_DIR/manage_tomcats.sh" login stop
 
 replace_am_state "${AM_BACKUP_NAME}"
-checkout_tomcats_state ${TOMCATS_BRANCH}
-checkout_repository_state "am-extensions" "${AM_EXTENSIONS_BRANCH}" true
-checkout_repository_state "select-role-node" "${SELECT_ROLE_NODE_BRANCH}" true
-checkout_repository_state "scripted-client-auth-node" "${SCRIPTED_CLIENT_AUTH_NODE_BRANCH}" true
+#checkout_tomcats_state ${TOMCATS_BRANCH}
+checkout_repository_state "am421-am-extensions" "${AM_EXTENSIONS_BRANCH}" true
+checkout_repository_state "am421-select-role-node" "${SELECT_ROLE_NODE_BRANCH}" true
+checkout_repository_state "am421-scripted-client-auth-node" "${SCRIPTED_CLIENT_AUTH_NODE_BRANCH}" true
 
 "$SCRIPT_DIR/manage_tomcats.sh" login start
 
-checkout_repository_state "contactlist" "${CONTACTLIST_BRANCH}"
+checkout_repository_state "am421-contactlist" "${CONTACTLIST_BRANCH}"
 "$SCRIPT_DIR/deploy_contactlist.sh"
 
 echo $1 > ${COURSE_DIR}/STATE

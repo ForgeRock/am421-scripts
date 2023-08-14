@@ -86,91 +86,42 @@ function setCatalinaHomeOrFail {
   fi
 }
 
+function isTomcatAlive() {
+  TOMCAT_NAME="$1"
+  CATALINA_HOME="$TOMCATS_HOME/$TOMCAT_NAME"
+  PORT=$(xmllint $CATALINA_HOME/conf/server.xml --xpath "string(/Server/Service/Connector[@protocol='HTTP/1.1']/@port)")
+  logf "Checking if $TOMCAT_NAME Tomcat is accessible with curl..."
+  curl -s -f -o /dev/null -m 1 http://localhost:$PORT
+  return $?
+}
 
 function waitForTomcatStartup {
 
   TOMCAT_NAME="$1"
+  TIMEOUT_SECS=${2:-180} # After a default of 3 minutes check if the Tomcat root page is accessible, if not fail
+  CATALINA_HOME="$TOMCATS_HOME/$TOMCAT_NAME"
   setCatalinaHomeOrFail "$TOMCAT_NAME"
-  PID=$(jps -v | grep $CATALINA_HOME | cut -d " " -f 1)
 
-
-       
-    # Use FIFO pipeline to check catalina.out for server startup notification rather than
-   
-    TMP="$(mktemp -u)-${TOMCAT_NAME}"
-    FIFO_RESULT="$TMP-result"
-    FIFO_TAIL_PID="$TMP-tail-pid"
-    FIFO_GREP_PID="$TMP-grep-pid"
-    FIFO_STOPPED_PID="$TMP-stopped-pid"
-    mkfifo "${FIFO_RESULT}" || exit 1
-    mkfifo "${FIFO_TAIL_PID}" || exit 1
-    mkfifo "${FIFO_GREP_PID}" || exit 1
-    mkfifo "${FIFO_STOPPED_PID}" || exit 1
-    (1>&2 printf "")
-
-    EXIT_STATUS=1
-
-    {
-        # run tail in the background so that the shell can
-        # kill tail when notified that grep has exited
-        stdbuf -o0 tail -n 0 -f $CATALINA_HOME/logs/catalina.out &
-        # remember tail's PID
-        sleep .1
-        TAIL_PID=$!
-        echo "${TAIL_PID}">${FIFO_TAIL_PID}
-        {
-          CATALINA_PID=$(jps -v | grep $CATALINA_HOME | cut -d " " -f 1)
-          while kill -0 "$CATALINA_PID" 2>/dev/null; do
-            sleep .2
-          done
-          echo "FAILED">${FIFO_RESULT}
-        }&
-        CATALINA_FAILED_TO_START_DETECTOR_PID=$!
-
-        sleep .1
-        echo "${CATALINA_FAILED_TO_START_DETECTOR_PID}">${FIFO_STOPPED_PID}
-    } | {
-        stdbuf -i0 -o0 awk '{ printf "." > "/dev/stderr"; printf "    "; print}' | {
-          GREP_PID=$$
-          # sharing the PID of this subshell with the topmost bash process
-          sleep .3
-          echo "${GREP_PID}">${FIFO_GREP_PID}
-          STARTUP_LINE=$(stdbuf -i0 -o0 grep -m 1 --color=always "Server startup in [0-9]\{1,\} ms")
-          # notify the first pipeline stage that grep is done
-          echo "STARTED">${FIFO_RESULT}
-        }
-    }&
-
-    # wait for the subprocesses to start and collect their PIDs
-    read -s TAIL_PID <${FIFO_TAIL_PID}
-    read -s CATALINA_FAILED_TO_START_DETECTOR_PID <${FIFO_STOPPED_PID}
-    read -s GREP_PID <${FIFO_GREP_PID}
-
-    # clean up
-    rm "${FIFO_TAIL_PID}" "${FIFO_STOPPED_PID}" "${FIFO_GREP_PID}"
-
-    # wait for notification from subprocesses
-    read -s RESULT <${FIFO_RESULT}
-    # clean up
-    rm "${FIFO_RESULT}"
-
-    case $RESULT in
-      "STARTED" )
-        logsuccess
-        EXIT_STATUS=0
-        kill "${CATALINA_FAILED_TO_START_DETECTOR_PID}"
-      ;;
-      *)
-        # failed, probably because the catalina process disappeared
-        # killing grep subprocess
-        kill "${GREP_PID}"
-        logfailed
-    esac
-
-    # started or failed to start, we can kill tail
-    kill "${TAIL_PID}"
-
-    return $EXIT_STATUS
+  EXIT_STATUS=1
+  let cnt=0
+  LOGMSG=$(tail -1 $CATALINA_HOME/logs/catalina.out)
+  while  [[ ! "$LOGMSG" =~ .+Server\ startup\ in\ \[[0-9]+\]\ m.+ ]]; do
+    logf "."
+    sleep 1
+    LOGMSG=$(tail -1 $CATALINA_HOME/logs/catalina.out)
+    let cnt++
+    # If the number of seconds has exceeded the TIMEOUT_SECS value then
+    # use curl to check if the Tomcat server is running, and if it fails immediately
+    # then consider startup failed for some reason and exit
+    if [ $cnt -ge $TIMEOUT_SECS ]; then
+      isTomcatAlive $TOMCAT_NAME
+      logstatus
+      return
+    fi
+  done
+  EXIT_STATUS=0
+  logsuccess
+  return $EXIT_STATUS
 }
 
 function tomcat_start {

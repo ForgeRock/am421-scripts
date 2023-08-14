@@ -4,6 +4,10 @@
 SCRIPT_DIR="$( dirname "$( which "$0" )" )"
 source $SCRIPT_DIR/common.sh
 
+if [ -n "$DEBUG_AM421_TOOLS" ]; then
+  logf "Skipping fetching of latest version of scripts in debug mode..."
+  exit 0
+fi
 cd "$SCRIPT_DIR"
 
 logf "Fetching latest version of scripts..."
