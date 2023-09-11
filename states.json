@@ -149,7 +149,7 @@
 
     "Ch4L1Ex2-start" : "Ch4L1Ex1-end",
     "Ch4L1Ex2-end" : {
-        "am": "Ch3L1Ex3-end",
+        "am": "Ch4L1Ex2-end",
         "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "initial",
         "am-extensions": "initial",
@@ -159,7 +159,7 @@
 
     "Ch4L1Ex3-start" : "Ch4L1Ex2-end",
     "Ch4L1Ex3-end" : {
-        "am": "Ch3L1Ex3-end",
+        "am": "Ch4L1Ex2-end",
         "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch4L1Ex3-end",
         "am-extensions": "initial",
@@ -169,7 +169,7 @@
 
     "Ch4L2Ex1-start" : "Ch4L1Ex3-end",
     "Ch4L2Ex1-end" : {
-        "am": "Ch3L1Ex3-end",
+        "am": "Ch4L1Ex2-end",
         "select-role-node":"Ch2L2Ex2-end",
         "contactlist": "Ch4L2Ex1-end",
         "am-extensions": "initial",
@@ -179,7 +179,7 @@
 
     "Ch4L2Ex2-start" : "Ch4L2Ex1-end",
     "Ch4L2Ex2-end" : {
-        "am": "Ch3L1Ex3-end",
+        "am": "Ch4L1Ex2-end",
         "select-role-node": "Ch2L2Ex2-end",
         "contactlist": "Ch4L2Ex2-end",
         "am-extensions": "initial",
