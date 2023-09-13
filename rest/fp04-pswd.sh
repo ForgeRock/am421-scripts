@@ -14,6 +14,7 @@ cat <<-END > ${TMP_DIR}/ipswd.json
   "input": {
     "password": "new-password"
   },
+  "code": "code-value",
   "token": "token-value"
 }
 END
@@ -21,7 +22,8 @@ TOKEN_DATA=${token_data}
 if [ -z ${token_data} ]; then
   TOKEN_DATA=$(cat ${TMP_DIR}/resp2.json | jq .token)
 fi
-cat ${TMP_DIR}/ipswd.json | jq ".input.password=\"${NEW_PWD}\" | .token=${TOKEN_DATA}" > ${TMP_DIR}/pswd.json
+CODE_VALUE=$(jq .requirements.code ${TMP_DIR}/resp2.json)
+cat ${TMP_DIR}/ipswd.json | jq ".input.password=\"${NEW_PWD}\" | .token=${TOKEN_DATA} | .code=${CODE_VALUE}" > ${TMP_DIR}/pswd.json
 
 curl -s -X POST \
   -H 'Content-Type: application/json' \
