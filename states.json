@@ -278,26 +278,6 @@
         "am-extensions": "Ch5L1Ex2-end",
         "tomcats": "Ch4L1Ex2-end",
         "scripted-client-auth-node": "master"
-    },
-
-    "Ch6L1Ex1-start" : {
-        "am": "Ch5L1Ex2-end",
-        "select-role-node": "Ch2L2Ex2-end",
-        "contactlist": "Ch6L1Ex1-start",
-        "am-extensions": "Ch5L1Ex2-end",
-        "tomcats": "Ch4L1Ex2-end",
-        "scripted-client-auth-node": "master"
-    },
-    "Ch6L1Ex1-end" : {
-        "am": "Ch6L1Ex1-end",
-        "select-role-node": "Ch2L2Ex2-end",
-        "contactlist": "Ch6L1Ex1-start",
-        "am-extensions": "Ch5L1Ex2-end",
-        "tomcats": "Ch4L1Ex2-end",
-        "scripted-client-auth-node": "master"
-    },
-
-    "Ch6L1Ex2-start" : "Ch6L1Ex1-end",
-    "Ch6L1Ex2-end" : "Ch6L1Ex2-start"
+    }
 
 }
