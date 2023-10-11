@@ -175,7 +175,7 @@ function build_project {
 
   cd "$PROJECT_DIR"
   logf "  Building ${PROJECT_NAME}.jar... "
-  mvn -q clean install -DskipTests > /dev/null
+  mvn -q clean install -Dmaven.test.skip > /dev/null
   logstatus
   return $?
 }
