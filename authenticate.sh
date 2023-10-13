@@ -19,7 +19,7 @@ function log {
 
 function echo_usage {
     log
-    log "Usage: $0 username password [chain name]"
+    log "Usage: $0 username password [tree name]"
     log "       Only those use cases are supported, where OpenAM"
     log "       returns immediately with the tokenId"
 }
